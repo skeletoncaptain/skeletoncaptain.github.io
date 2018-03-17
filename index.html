@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Skeleton Captain</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+  main {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+  }
+  body {
+    background-color: black;
+    color: #eee;
+    border-radius: 0px;
+  }
+  h1 {
+    font-family: Kaufmann;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 80px;
+  }
+  p {
+    font-family: NeutraDemi;
+    font-size: 30px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 10%;
+  }
+  .release-date {
+    font-style: oblique;
+    color: #ffd;
+  }
+  #skull {
+    max-width: 60%;
+    max-height: 100%;
+    padding-top: 400px;
+    padding-left: 20%;
+  }
+  .slide {
+    padding-top: 380px;
+  }
+  </style>
+</head>
+<body>
+  <div class="row main">
+    <div class="col-4">
+      <img id="skull" src="http://www.onlygfx.com/wp-content/uploads/2017/06/skull-drawing-1.png">
+    </div>
+    <div class="col-8">
+      <div class="siema">
+        <div class="slide">
+          <h1>Skeleton Captain</h1>
+          <p>Beware ye who enter this place</p>
+          <p>The book releases <span class="release-date">April 21<sup>st</sup> 2018</span></p>
+        </div>
+        <div class="slide">
+          <h1>Play the Game</h1>
+          <p>The app releases <span class="release-date">April 30<sup>th</sup> 2018</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="siema.min.js"></script>
+  <script>
+    const s = new Siema({
+      selector: '.siema',
+      duration: 2000,
+      perPage: 1,
+      startIndex: 0,
+      draggable: true,
+      threshold: 20,
+      loop: true,
+    });
+    setInterval(function () {s.next() }, 7000);
+  </script>
+
+</body>
+</html>
+
